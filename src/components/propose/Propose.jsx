@@ -1,6 +1,6 @@
 import React from "react";
 import CreateMarket from "../createmarket/CreateMarket";
-import "./propose.css";
+import "./Propose.css";
 
 const Propose = ({ contract }) => {
   return (
