@@ -1,0 +1,46 @@
+.hero {
+  background-color: #1e1e2f;
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #cfd8dc;
+}
+
+/* Display list items as horizontal boxes */
+.hero-content ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.hero-content li {
+  background: #2e2e4f;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1 1 300px;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.hero-content li:hover {
+  transform: translateY(0px);
+}

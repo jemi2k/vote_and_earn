@@ -1,0 +1,259 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  border: 2px solid red;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.modal-title {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.modal-content {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.candidate-options {
+  margin-bottom: 1rem;
+}
+
+.candidate-option {
+  display: block;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.modal-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modal-actions button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Items page container */
+.items-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Modal overlay covering the entire viewport */
+.items-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal panel for the Items component */
+.items-modal {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  padding: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Fade in animation for the modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal header styling */
+.items-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.items-title {
+  margin: 0;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Content and section styling */
+.items-content {
+  margin-bottom: 1rem;
+}
+.items-section {
+  margin-bottom: 1rem;
+}
+.items-section p {
+  margin: 0 0 5px;
+  color: #555;
+}
+
+/* Input fields for text and numbers */
+.items-section input[type="text"],
+.items-section input[type="number"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Candidate options styling */
+.candidate-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.candidate-option {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.candidate-option input {
+  margin-right: 0.3rem;
+}
+
+/* Input with max button styling */
+.input-with-max {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-with-max input {
+  flex: 1;
+  padding: 0.5rem 3.5rem 0.5rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.max-btn {
+  position: absolute;
+  right: 0.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.max-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Balance info styling */
+.balance-info {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.3rem;
+  text-align: right;
+}
+
+/* Market details section styling */
+.market-details {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+.market-details h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+.market-details p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+.market-details ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0.3rem 0;
+}
+
+/* Items footer with action buttons */
+.items-footer {
+  display: flex;
+  gap: 0.5rem;
+  border-top: 1px solid #eee;
+  padding-top: 0.5rem;
+}
+.items-footer button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+.items-footer button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.items-footer button:not(:disabled):hover {
+  opacity: 0.9;
+}
+
+/* Specific button colors for clarity */
+.items-footer button:nth-child(1) {
+  background-color: #007bff; /* Approve USDC button */
+}
+.items-footer button:nth-child(2) {
+  background-color: #28a745; /* Purchase or Assert button */
+}
+.items-footer button:nth-child(3) {
+  background-color: #dc3545; /* Cancel button */
+}

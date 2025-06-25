@@ -1,0 +1,11 @@
+.propose-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.propose-page h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,153 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1e1e2f;
+    
+}
+
+.testnet-info {
+    /* shrink-wrap to its content */
+    margin: 1rem auto 0;   
+    
+    border: 1px solid transparent;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgb(238, 213, 213);
+    width: 35%;
+    padding: 0.05rem !important;
+  }
+  
+  .testnet-info a {
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .testnet-info a:hover {
+    text-decoration: underline;
+  }
+/* Logo styling */
+.navbar-logo {
+    margin-left: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.navbar-logo a {
+    color: red;
+    text-decoration: none;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-logo h1 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+/* Navbar links */
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.navbar-links a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #fff;
+}
+
+.navbar-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+/* Wallet button section */
+.wallet-section {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 6rem;  /* Increased margin from the edge */
+}
+
+/* Connect button styling */
+.connectBTN {
+    background: #e53935;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.connectBTN:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+
+.connectBTN:hover {
+    background: #b71c1c;
+    transform: translateY(-2px);
+}
+
+a:hover {
+    color: white !important;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem 2rem;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .connectBTN {
+        width: 130px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
