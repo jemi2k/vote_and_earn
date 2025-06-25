@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
-import "./Createmarket.css";
+import "./CreateMarket.css";
 import usdcABI from "../currencyAPI/erc20ABI.json";
 import ABI from "../Navbar/ABI.json";
 
