@@ -59,12 +59,17 @@ const Items = ({
     try {
       setLoadingApprove(true);
       setApprovalStatus("Approving USDC...");
-      // Use ethers v6 BrowserProvider for approval.
       const provider = new ethers.BrowserProvider(window.ethereum);
       const signer = await provider.getSigner();
       const usdcContract = new ethers.Contract(USDC_ADDRESS, usdcABI, signer);
-      // Approve the VotePrediction contract to spend the entered purchase amount.
-      const amountToApprove = ethers.parseUnits(purchaseAmount || "0", 6);
+
+      let amountToApprove;
+      if (mode === "purchase") {
+        amountToApprove = ethers.parseUnits(purchaseAmount || "0", 6);
+      } else if (mode === "assert") {
+        amountToApprove = market.requiredBond;
+      }
+
       const tx = await usdcContract.approve(DEPLOYED_ADDRESS, amountToApprove);
       await tx.wait();
       setApprovalStatus("Approval successful.");
